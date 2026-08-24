@@ -1,0 +1,1326 @@
+/* =========================================================
+   ZORHAM.TECH
+   DOWNLOAD PAGE
+   CYBERPUNK / HACKER
+========================================================= */
+
+:root {
+    --bg: #030507;
+    --bg-soft: #070b0e;
+    --panel: #080d10;
+
+    --cyan: #00f6ff;
+    --cyan-soft: rgba(0, 246, 255, 0.15);
+
+    --green: #00ff88;
+    --green-soft: rgba(0, 255, 136, 0.12);
+
+    --purple: #a855f7;
+
+    --white: #e9feff;
+    --text: #9ab0b5;
+    --muted: #52666b;
+
+    --border: rgba(0, 246, 255, 0.18);
+
+    --font-code: "JetBrains Mono", monospace;
+    --font-display: "Orbitron", sans-serif;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-code);
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.background-grid {
+    position: fixed;
+    inset: 0;
+    z-index: -5;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 246, 255, 0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(0, 246, 255, 0.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 45px 45px;
+
+    mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent 90%
+    );
+}
+
+.background-grid::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 50% 15%,
+            rgba(0, 246, 255, 0.09),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 80% 60%,
+            rgba(168, 85, 247, 0.06),
+            transparent 30%
+        );
+}
+
+.scanlines {
+    position: fixed;
+    inset: 0;
+
+    z-index: 1000;
+
+    pointer-events: none;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            transparent 0,
+            transparent 3px,
+            rgba(255, 255, 255, 0.012) 4px
+        );
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 100;
+
+    border-bottom: 1px solid var(--border);
+
+    background: rgba(3, 5, 7, 0.82);
+
+    backdrop-filter: blur(15px);
+}
+
+.nav-container {
+    width: min(1200px, calc(100% - 40px));
+
+    height: 78px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    font-family: var(--font-display);
+
+    font-size: 18px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    color: var(--white);
+
+    text-shadow:
+        0 0 12px rgba(0, 246, 255, 0.35);
+}
+
+.logo-dot {
+    color: var(--cyan);
+}
+
+.logo-symbol {
+    color: var(--cyan);
+
+    opacity: 0.8;
+}
+
+.nav-menu {
+    display: flex;
+
+    align-items: center;
+
+    gap: 36px;
+}
+
+.nav-link {
+    position: relative;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    color: var(--muted);
+
+    transition: 0.25s ease;
+}
+
+.nav-link::before {
+    content: ">";
+
+    position: absolute;
+
+    left: -14px;
+
+    opacity: 0;
+
+    color: var(--cyan);
+
+    transition: 0.25s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--cyan);
+
+    text-shadow:
+        0 0 10px rgba(0, 246, 255, 0.5);
+}
+
+.nav-link:hover::before,
+.nav-link.active::before {
+    opacity: 1;
+}
+
+.menu-toggle {
+    display: none;
+
+    width: 38px;
+    height: 38px;
+
+    background: transparent;
+
+    border: 1px solid var(--border);
+
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+
+    width: 18px;
+    height: 1px;
+
+    margin: 4px auto;
+
+    background: var(--cyan);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.download-hero {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 140px 0 90px;
+}
+
+.download-container {
+    width: min(1200px, calc(100% - 40px));
+
+    margin: auto;
+}
+
+.terminal-status {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 45px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+
+    display: inline-block;
+
+    border-radius: 50%;
+
+    background: var(--green);
+
+    box-shadow:
+        0 0 8px var(--green),
+        0 0 20px rgba(0, 255, 136, 0.4);
+
+    animation: pulse 2s infinite;
+}
+
+.status-line {
+    width: 60px;
+    height: 1px;
+
+    background: var(--border);
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.35;
+    }
+}
+
+.download-title {
+    max-width: 850px;
+}
+
+.terminal-label {
+    color: var(--green);
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+.download-title h1 {
+    margin: 18px 0 20px;
+
+    font-family: var(--font-display);
+
+    font-size: clamp(48px, 9vw, 105px);
+
+    line-height: 0.95;
+
+    letter-spacing: -3px;
+
+    color: var(--white);
+}
+
+.download-title h1 span {
+    color: var(--cyan);
+
+    text-shadow:
+        0 0 15px rgba(0, 246, 255, 0.5),
+        0 0 40px rgba(0, 246, 255, 0.2);
+}
+
+.typing-wrapper {
+    min-height: 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    margin-bottom: 28px;
+
+    color: var(--green);
+
+    font-size: 13px;
+}
+
+.terminal-prompt {
+    margin-right: 10px;
+
+    color: var(--cyan);
+}
+
+.cursor,
+.cursor-small {
+    color: var(--cyan);
+
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.download-title > p {
+    max-width: 680px;
+
+    margin-bottom: 18px;
+
+    color: var(--text);
+
+    font-size: 13px;
+
+    line-height: 1.9;
+}
+
+.highlight-text {
+    color: var(--white) !important;
+
+    font-weight: 600;
+}
+
+.highlight-text span {
+    margin-right: 8px;
+
+    color: var(--purple);
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.download-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-top: 35px;
+}
+
+.cyber-button {
+    position: relative;
+
+    min-width: 200px;
+
+    padding: 15px 22px;
+
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid var(--cyan);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    overflow: hidden;
+
+    transition: 0.25s ease;
+}
+
+.cyber-button.primary {
+    color: #001113;
+
+    background: var(--cyan);
+
+    box-shadow:
+        0 0 20px rgba(0, 246, 255, 0.15);
+}
+
+.cyber-button.secondary {
+    color: var(--cyan);
+
+    background: transparent;
+}
+
+.cyber-button::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(255, 255, 255, 0.35);
+
+    transform: skewX(-25deg);
+
+    transition: 0.45s ease;
+}
+
+.cyber-button:hover::before {
+    left: 120%;
+}
+
+.cyber-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 25px rgba(0, 246, 255, 0.25);
+}
+
+
+/* =========================================================
+   TERMINAL
+========================================================= */
+
+.download-terminal {
+    max-width: 800px;
+
+    margin-top: 70px;
+    margin-left: auto;
+
+    border: 1px solid var(--border);
+
+    background: rgba(5, 10, 12, 0.9);
+
+    box-shadow:
+        0 0 60px rgba(0, 246, 255, 0.04);
+}
+
+.terminal-header {
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 15px;
+
+    border-bottom: 1px solid var(--border);
+
+    background: rgba(0, 246, 255, 0.025);
+}
+
+.terminal-controls {
+    display: flex;
+
+    gap: 6px;
+}
+
+.terminal-controls span {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    border: 1px solid var(--muted);
+}
+
+.terminal-title {
+    flex: 1;
+
+    text-align: center;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+    color: var(--muted);
+}
+
+.terminal-version {
+    font-size: 8px;
+
+    color: var(--green);
+}
+
+.terminal-body {
+    padding: 25px;
+
+    font-size: 11px;
+
+    line-height: 2;
+}
+
+.green {
+    color: var(--green);
+}
+
+.cyan {
+    color: var(--cyan);
+}
+
+.command {
+    margin-left: 8px;
+
+    color: var(--white);
+}
+
+.terminal-output {
+    padding-left: 15px;
+
+    color: var(--text);
+}
+
+.success {
+    color: var(--green);
+}
+
+
+/* =========================================================
+   SYSTEM INFO
+========================================================= */
+
+.system-info {
+    width: min(1200px, calc(100% - 40px));
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.info-item {
+    padding: 25px;
+
+    border-right: 1px solid var(--border);
+
+    text-align: center;
+}
+
+.info-item:last-child {
+    border-right: none;
+}
+
+.info-label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color: var(--muted);
+}
+
+.info-item strong {
+    font-size: 10px;
+
+    color: var(--green);
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.section {
+    padding: 120px 0;
+}
+
+.section-container {
+    width: min(1200px, calc(100% - 40px));
+
+    margin: auto;
+}
+
+.section-heading {
+    display: flex;
+
+    gap: 25px;
+
+    margin-bottom: 55px;
+}
+
+.section-number {
+    color: var(--cyan);
+
+    font-size: 11px;
+}
+
+.section-command {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: var(--muted);
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-family: var(--font-display);
+
+    font-size: clamp(28px, 5vw, 48px);
+
+    color: var(--white);
+
+    letter-spacing: 2px;
+}
+
+.section-heading h2 span {
+    color: var(--cyan);
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.features-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.feature-card {
+    position: relative;
+
+    min-height: 310px;
+
+    padding: 25px;
+
+    border: 1px solid var(--border);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(0, 246, 255, 0.035),
+            transparent 50%
+        ),
+        var(--panel);
+
+    overflow: hidden;
+
+    transition: 0.3s ease;
+}
+
+.feature-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 35%;
+
+    height: 1px;
+
+    background: var(--cyan);
+
+    box-shadow:
+        0 0 15px var(--cyan);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(0, 246, 255, 0.45);
+
+    box-shadow:
+        0 15px 40px rgba(0, 246, 255, 0.05);
+}
+
+.feature-number {
+    color: var(--muted);
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+
+    display: grid;
+
+    place-items: center;
+
+    margin: 30px 0 25px;
+
+    border: 1px solid var(--cyan);
+
+    color: var(--cyan);
+
+    font-family: var(--font-display);
+
+    font-size: 25px;
+    font-weight: 900;
+
+    box-shadow:
+        inset 0 0 20px rgba(0, 246, 255, 0.05);
+}
+
+.feature-card h3 {
+    margin-bottom: 15px;
+
+    font-family: var(--font-display);
+
+    font-size: 16px;
+
+    color: var(--white);
+
+    letter-spacing: 1px;
+}
+
+.feature-card p {
+    color: var(--text);
+
+    font-size: 10px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   AGUSTUSAN
+========================================================= */
+
+.agustusan-box {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 180px 1fr;
+
+    gap: 55px;
+
+    padding: 55px;
+
+    border: 1px solid var(--border);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(168, 85, 247, 0.035),
+            transparent 45%
+        ),
+        var(--panel);
+
+    overflow: hidden;
+}
+
+.agustusan-box::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 45%;
+
+    height: 2px;
+
+    background: var(--cyan);
+
+    box-shadow:
+        0 0 20px var(--cyan);
+}
+
+.agustusan-symbol {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    height: 180px;
+
+    border: 1px solid var(--cyan);
+
+    color: var(--cyan);
+
+    font-family: var(--font-display);
+
+    font-size: 48px;
+    font-weight: 900;
+
+    text-shadow:
+        0 0 15px rgba(0, 246, 255, 0.4);
+
+    box-shadow:
+        inset 0 0 35px rgba(0, 246, 255, 0.04);
+}
+
+.agustusan-content h2 {
+    margin: 15px 0 20px;
+
+    font-family: var(--font-display);
+
+    font-size: clamp(30px, 5vw, 50px);
+
+    color: var(--white);
+}
+
+.agustusan-content h2 span {
+    color: var(--cyan);
+}
+
+.agustusan-content p {
+    max-width: 720px;
+
+    margin-bottom: 18px;
+
+    color: var(--text);
+
+    font-size: 11px;
+
+    line-height: 1.9;
+}
+
+.agustusan-terminal {
+    margin-top: 30px;
+
+    padding: 18px;
+
+    border-left: 2px solid var(--cyan);
+    border-top: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+
+    background: rgba(0, 246, 255, 0.02);
+
+    font-size: 9px;
+
+    line-height: 2;
+}
+
+
+/* =========================================================
+   INSTALLATION
+========================================================= */
+
+.steps-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.step-card {
+    padding: 25px;
+
+    border: 1px solid var(--border);
+
+    background: var(--panel);
+
+    transition: 0.3s ease;
+}
+
+.step-card:hover {
+    border-color: rgba(0, 246, 255, 0.4);
+
+    transform: translateY(-4px);
+}
+
+.step-number {
+    display: block;
+
+    margin-bottom: 35px;
+
+    color: var(--cyan);
+
+    font-family: var(--font-display);
+
+    font-size: 28px;
+
+    font-weight: 800;
+}
+
+.step-card h3 {
+    margin-bottom: 15px;
+
+    color: var(--white);
+
+    font-family: var(--font-display);
+
+    font-size: 15px;
+}
+
+.step-card p {
+    color: var(--text);
+
+    font-size: 10px;
+
+    line-height: 1.9;
+}
+
+.step-card strong {
+    color: var(--green);
+}
+
+
+/* =========================================================
+   FINAL DOWNLOAD
+========================================================= */
+
+.final-download {
+    padding-top: 20px;
+    padding-bottom: 140px;
+}
+
+.final-download-box {
+    position: relative;
+
+    padding: 75px 30px;
+
+    text-align: center;
+
+    border: 1px solid var(--border);
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(0, 246, 255, 0.07),
+            transparent 55%
+        );
+
+    overflow: hidden;
+}
+
+.final-download-box::before,
+.final-download-box::after {
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+    height: 1px;
+
+    background: var(--cyan);
+
+    box-shadow:
+        0 0 15px var(--cyan);
+}
+
+.final-download-box::before {
+    top: 0;
+    left: 0;
+}
+
+.final-download-box::after {
+    right: 0;
+    bottom: 0;
+}
+
+.final-download-box h2 {
+    margin: 15px 0;
+
+    font-family: var(--font-display);
+
+    font-size: clamp(30px, 6vw, 58px);
+
+    color: var(--white);
+}
+
+.final-download-box h2 span {
+    color: var(--cyan);
+}
+
+.final-download-box p {
+    max-width: 550px;
+
+    margin: 0 auto 30px;
+
+    color: var(--text);
+
+    font-size: 11px;
+
+    line-height: 1.8;
+}
+
+.final-button {
+    margin: 10px auto 25px;
+}
+
+.download-note {
+    color: var(--muted);
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    border-top: 1px solid var(--border);
+
+    background: #020405;
+}
+
+.footer-container {
+    width: min(1200px, calc(100% - 40px));
+
+    min-height: 90px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.footer-logo {
+    font-family: var(--font-display);
+
+    font-size: 13px;
+    font-weight: 800;
+
+    color: var(--white);
+}
+
+.footer-logo span {
+    color: var(--cyan);
+}
+
+.footer-status {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 8px;
+
+    color: var(--muted);
+}
+
+.footer-copy {
+    font-size: 7px;
+
+    color: var(--muted);
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .features-grid,
+    .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .agustusan-box {
+        grid-template-columns: 130px 1fr;
+
+        gap: 35px;
+    }
+
+    .agustusan-symbol {
+        height: 130px;
+
+        font-size: 35px;
+    }
+}
+
+
+@media (max-width: 800px) {
+
+    .nav-menu {
+        position: absolute;
+
+        top: 78px;
+
+        left: 20px;
+        right: 20px;
+
+        padding: 25px;
+
+        display: none;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 25px;
+
+        border: 1px solid var(--border);
+
+        background: rgba(3, 5, 7, 0.97);
+    }
+
+    .nav-menu.open {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .agustusan-box {
+        grid-template-columns: 1fr;
+    }
+
+    .agustusan-symbol {
+        width: 130px;
+    }
+
+    .system-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .info-item:nth-child(2) {
+        border-right: none;
+    }
+
+    .info-item:nth-child(-n+2) {
+        border-bottom: 1px solid var(--border);
+    }
+
+    .footer-container {
+        flex-direction: column;
+
+        justify-content: center;
+
+        padding: 25px 0;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .nav-container,
+    .download-container,
+    .section-container,
+    .footer-container {
+        width: min(100% - 28px, 1200px);
+    }
+
+    .download-hero {
+        padding-top: 120px;
+    }
+
+    .download-title h1 {
+        font-size: clamp(45px, 15vw, 70px);
+
+        letter-spacing: -2px;
+    }
+
+    .download-title > p {
+        font-size: 11px;
+    }
+
+    .download-buttons {
+        flex-direction: column;
+    }
+
+    .cyber-button {
+        width: 100%;
+    }
+
+    .download-terminal {
+        margin-top: 45px;
+    }
+
+    .terminal-body {
+        padding: 18px;
+
+        font-size: 9px;
+    }
+
+    .features-grid,
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 90px 0;
+    }
+
+    .section-heading {
+        gap: 12px;
+    }
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+
+    .agustusan-box {
+        padding: 25px;
+
+        gap: 30px;
+    }
+
+    .agustusan-symbol {
+        width: 100px;
+        height: 100px;
+
+        font-size: 28px;
+    }
+
+    .agustusan-content h2 {
+        font-size: 31px;
+    }
+
+    .system-info {
+        width: 100%;
+    }
+
+    .info-item {
+        padding: 20px 10px;
+    }
+
+    .final-download-box {
+        padding: 55px 20px;
+    }
+}

@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        zorham.tech — Digital Playground
+    </title>
+
+    <meta
+        name="description"
+        content="zorham.tech — ruang berbagi aplikasi, teknologi, dan eksperimen digital."
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- BACKGROUND -->
+
+    <div class="background-grid"></div>
+
+    <div class="scanlines"></div>
+
+
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a
+                href="#home"
+                class="logo"
+            >
+
+                <span class="logo-symbol">
+                    &lt;
+                </span>
+
+                <span>
+                    zorham
+                </span>
+
+                <span class="logo-dot">
+                    .
+                </span>
+
+                <span>
+                    tech
+                </span>
+
+                <span class="logo-symbol">
+                    /&gt;
+                </span>
+
+            </a>
+
+
+            <nav class="nav-menu">
+
+                <a
+                    href="#home"
+                    class="nav-link active"
+                >
+                    HOME
+                </a>
+
+                <a
+                    href="#apps"
+                    class="nav-link"
+                >
+                    APLIKASI
+                </a>
+
+                <a
+                    href="#request"
+                    class="nav-link"
+                >
+                    REQUEST
+                </a>
+
+                <a
+                    href="#about"
+                    class="nav-link"
+                >
+                    TENTANG
+                </a>
+
+                <a
+                    href="#contact"
+                    class="nav-link"
+                >
+                    KONTAK
+                </a>
+
+            </nav>
+
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Menu"
+                type="button"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main>
+
+
+
+        <!-- =================================================
+             HERO
+        ================================================== -->
+
+        <section
+            class="hero"
+            id="home"
+        >
+
+            <div class="hero-container">
+
+
+                <div class="terminal-status">
+
+                    <span class="status-dot"></span>
+
+                    SYSTEM ONLINE
+
+                    <span class="status-line"></span>
+
+                    <span>
+                        v2.0.26
+                    </span>
+
+                </div>
+
+
+
+                <div class="hero-content">
+
+
+                    <div class="hero-small">
+
+                        <span>
+                            &gt;
+                        </span>
+
+                        INITIALIZING ZORHAM.TECH...
+
+                    </div>
+
+
+
+                    <h1>
+
+                        <span class="hero-line">
+                            WELCOME TO
+                        </span>
+
+                        <span class="hero-brand">
+                            ZORHAM<span>.TECH</span>
+                        </span>
+
+                    </h1>
+
+
+
+                    <!-- TYPING EFFECT -->
+
+                    <div class="typing-wrapper">
+
+                        <span class="terminal-prompt">
+                            &gt;
+                        </span>
+
+                        <span id="typingText"></span>
+
+                        <span class="cursor">
+                            █
+                        </span>
+
+                    </div>
+
+
+
+                    <p class="hero-description">
+
+                        Sebuah ruang digital untuk berbagi aplikasi,
+                        membangun sesuatu yang berguna, dan mengeksplorasi
+                        dunia teknologi tanpa batas.
+
+                    </p>
+
+
+
+                    <div class="hero-quote">
+
+                        <span>
+                            //
+                        </span>
+
+                        Menyesatkan dalam Jalan yang Benar.
+
+                    </div>
+
+
+
+                    <div class="hero-buttons">
+
+                        <a
+                            href="#apps"
+                            class="cyber-button primary"
+                        >
+
+                            <span>
+                                ./ LIHAT_APLIKASI
+                            </span>
+
+                            <i></i>
+
+                        </a>
+
+
+                        <a
+                            href="#request"
+                            class="cyber-button secondary"
+                        >
+
+                            <span>
+                                ./ REQUEST_APLIKASI
+                            </span>
+
+                            <i></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TERMINAL -->
+
+                <div class="hero-terminal">
+
+
+                    <div class="terminal-header">
+
+                        <div class="terminal-controls">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+
+                        <div class="terminal-title">
+                            zorham@system:~
+                        </div>
+
+
+                        <div class="terminal-version">
+                            TERMINAL
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="terminal-body">
+
+
+                        <div>
+
+                            <span class="green">
+                                zorham@system
+                            </span>
+
+                            <span>
+                                :
+                            </span>
+
+                            <span class="cyan">
+                                ~
+                            </span>
+
+                            <span>
+                                $
+                            </span>
+
+                            <span class="command">
+                                whoami
+                            </span>
+
+                        </div>
+
+
+                        <div class="terminal-output">
+                            zorham
+                        </div>
+
+
+
+                        <div>
+
+                            <span class="green">
+                                zorham@system
+                            </span>
+
+                            <span>
+                                :
+                            </span>
+
+                            <span class="cyan">
+                                ~
+                            </span>
+
+                            <span>
+                                $
+                            </span>
+
+                            <span class="command">
+                                status
+                            </span>
+
+                        </div>
+
+
+                        <div class="terminal-output">
+
+                            <span class="success">
+                                [ONLINE]
+                            </span>
+
+                            All systems operational.
+
+                        </div>
+
+
+
+                        <div>
+
+                            <span class="green">
+                                zorham@system
+                            </span>
+
+                            <span>
+                                :
+                            </span>
+
+                            <span class="cyan">
+                                ~
+                            </span>
+
+                            <span>
+                                $
+                            </span>
+
+                            <span class="command">
+                                ls ./projects
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="terminal-files">
+
+                            <span>
+                                ./aplikasi-z
+                            </span>
+
+                            <span>
+                                ./web-projects
+                            </span>
+
+                            <span>
+                                ./experiments
+                            </span>
+
+                        </div>
+
+
+
+                        <div>
+
+                            <span class="green">
+                                zorham@system
+                            </span>
+
+                            <span>
+                                :
+                            </span>
+
+                            <span class="cyan">
+                                ~
+                            </span>
+
+                            <span>
+                                $
+                            </span>
+
+                            <span class="cursor-small">
+                                █
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SYSTEM INFO
+        ================================================== -->
+
+        <section class="system-info">
+
+
+            <div class="info-item">
+
+                <span class="info-label">
+                    SISTEM
+                </span>
+
+                <strong>
+                    ONLINE
+                </strong>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <span class="info-label">
+                    PROYEK
+                </span>
+
+                <strong>
+                    01+
+                </strong>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <span class="info-label">
+                    MODE
+                </span>
+
+                <strong>
+                    BUILDING
+                </strong>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <span class="info-label">
+                    STATUS
+                </span>
+
+                <strong>
+                    ACTIVE
+                </strong>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PROJECTS
+        ================================================== -->
+
+        <section
+            class="section apps-section"
+            id="apps"
+        >
+
+            <div class="section-container">
+
+
+                <div class="section-heading">
+
+                    <div class="section-number">
+                        [01]
+                    </div>
+
+
+                    <div>
+
+                        <span class="section-command">
+                            // EXECUTE: applications
+                        </span>
+
+                        <h2>
+                            MY <span>PROJECTS</span>
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="apps-grid">
+
+
+                    <!-- APLIKASI Z -->
+
+                    <article class="app-card featured">
+
+                        <div class="card-top">
+
+                            <span class="card-id">
+                                APP_001
+                            </span>
+
+                            <span class="card-status">
+                                ● ONLINE
+                            </span>
+
+                        </div>
+
+
+                        <div class="app-icon">
+                            Z
+                        </div>
+
+
+                        <h3>
+                            APLIKASI Z
+                        </h3>
+
+
+                        <div class="card-line"></div>
+
+
+                        <p>
+
+                            Aplikasi manajemen tagihan,
+                            anggota, pinjaman, pembayaran,
+                            dan data keuangan yang dirancang
+                            untuk berjalan secara lokal.
+
+                        </p>
+
+
+                        <div class="tech-stack">
+
+                            <span>
+                                REACT NATIVE
+                            </span>
+
+                            <span>
+                                EXPO
+                            </span>
+
+                            <span>
+                                OFFLINE
+                            </span>
+
+                        </div>
+
+<a
+    href="aplikasi-z.html"
+    class="app-button"
+>
+    <span>
+        LIHAT APLIKASI
+    </span>
+
+    <span>
+        →
+    </span>
+</a>
+
+                    </article>
+
+
+
+                    <!-- PROJECT 02 -->
+
+                    <article class="app-card">
+
+                        <div class="card-top">
+
+                            <span class="card-id">
+                                PROJECT_002
+                            </span>
+
+                            <span class="card-status developing">
+                                ● DEVELOPING
+                            </span>
+
+                        </div>
+
+
+                        <div class="app-icon outline">
+                            ?
+                        </div>
+
+
+                        <h3>
+                            PROJECT 02
+                        </h3>
+
+
+                        <div class="card-line"></div>
+
+
+                        <p>
+
+                            Sesuatu sedang dibangun di
+                            balik layar. Project berikutnya
+                            akan segera memasuki sistem.
+
+                        </p>
+
+
+                        <div class="tech-stack">
+
+                            <span>
+                                SEGERA HADIR
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="#"
+                            class="app-button disabled"
+                        >
+
+                            <span>
+                                AKSES_DITOLAK
+                            </span>
+
+                            <span>
+                                ×
+                            </span>
+
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- PROJECT 03 -->
+
+                    <article class="app-card">
+
+                        <div class="card-top">
+
+                            <span class="card-id">
+                                PROJECT_003
+                            </span>
+
+                            <span class="card-status developing">
+                                ● CLASSIFIED
+                            </span>
+
+                        </div>
+
+
+                        <div class="app-icon outline">
+                            #
+                        </div>
+
+
+                        <h3>
+                            UNKNOWN PROJECT
+                        </h3>
+
+
+                        <div class="card-line"></div>
+
+
+                        <p>
+
+                            Informasi project ini masih
+                            diklasifikasikan. Tunggu sampai
+                            sistem membuka akses.
+
+                        </p>
+
+
+                        <div class="tech-stack">
+
+                            <span>
+                                CLASSIFIED
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="#"
+                            class="app-button disabled"
+                        >
+
+                            <span>
+                                TERKUNCI
+                            </span>
+
+                            <span>
+                                ×
+                            </span>
+
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             REQUEST APPLICATION
+        ================================================== -->
+
+        <section
+            class="section request-section"
+            id="request"
+        >
+
+            <div class="section-container">
+
+
+                <div class="section-heading">
+
+                    <div class="section-number">
+                        [02]
+                    </div>
+
+
+                    <div>
+
+                        <span class="section-command">
+                            // EXECUTE: new_application_request
+                        </span>
+
+                        <h2>
+                            REQUEST
+                            <span>APLIKASI</span>
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="request-grid">
+
+
+                    <!-- REQUEST INFO -->
+
+                    <div class="request-info">
+
+                        <div class="request-terminal-symbol">
+                            &gt;_
+                        </div>
+
+
+                        <span class="request-label">
+                            [ REQUEST APLIKASI BARU ]
+                        </span>
+
+
+                        <h3>
+
+                            PUNYA
+                            <span>IDE?</span>
+
+                        </h3>
+
+
+                        <p>
+
+                            Punya ide aplikasi yang ingin
+                            dibuat? Ceritakan kebutuhanmu.
+                            Tidak perlu menggunakan istilah
+                            teknis.
+
+                        </p>
+
+
+                        <p>
+
+                            Jelaskan saja aplikasi seperti
+                            apa yang kamu inginkan dan
+                            bagaimana aplikasi tersebut
+                            akan digunakan.
+
+                        </p>
+
+
+                        <div class="request-command-box">
+
+                            <div>
+
+                                <span class="green">
+                                    zorham@system
+                                </span>
+
+                                <span>
+                                    :
+                                </span>
+
+                                <span class="cyan">
+                                    ~
+                                </span>
+
+                                <span>
+                                    $
+                                </span>
+
+                            </div>
+
+
+                            <div class="request-command">
+                                request --new-application
+                            </div>
+
+
+                            <div class="request-result">
+                                Menunggu ide kamu...
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- REQUEST FORM -->
+
+                    <div class="request-terminal">
+
+
+                        <div class="request-terminal-header">
+
+                            <div class="terminal-controls">
+
+                                <span></span>
+                                <span></span>
+                                <span></span>
+
+                            </div>
+
+
+                            <div class="terminal-title">
+                                request_aplikasi.exe
+                            </div>
+
+
+                            <div class="terminal-version">
+                                ONLINE
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- FORM EMAIL -->
+
+                        <form
+                            class="request-form"
+                            id="requestForm"
+                            action="https://formsubmit.co/mahruszorham@gmail.com"
+                            method="POST"
+                        >
+
+
+                            <input
+                                type="hidden"
+                                name="_subject"
+                                value="REQUEST APLIKASI - ZORHAM.TECH"
+                            >
+
+
+                            <input
+                                type="hidden"
+                                name="_template"
+                                value="table"
+                            >
+
+
+                            <input
+                                type="hidden"
+                                name="_captcha"
+                                value="true"
+                            >
+
+
+                            <!-- GANTI DENGAN DOMAIN KAMU -->
+                            <!-- Contoh:
+                            https://zorham.tech/
+                            -->
+
+                            <input
+                                type="hidden"
+                                name="_next"
+                                value="https://zorham.tech/"
+                            >
+
+
+                            <!-- ANTI SPAM -->
+
+                            <input
+                                type="text"
+                                name="_honey"
+                                tabindex="-1"
+                                autocomplete="off"
+                                style="display:none"
+                            >
+
+
+
+                            <div class="form-group">
+
+                                <label for="requestName">
+                                    &gt; NAMA_KAMU
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="requestName"
+                                    name="name"
+                                    placeholder="Masukkan nama..."
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <div class="form-group">
+
+                                <label for="requestContact">
+                                    &gt; KONTAK
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="requestContact"
+                                    name="contact"
+                                    placeholder="WhatsApp / Email..."
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <div class="form-group">
+
+                                <label for="requestEmail">
+                                    &gt; EMAIL
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="requestEmail"
+                                    name="email"
+                                    placeholder="Alamat email kamu..."
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <div class="form-group">
+
+                                <label for="requestApp">
+                                    &gt; NAMA_APLIKASI
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="requestApp"
+                                    name="application"
+                                    placeholder="Nama aplikasi..."
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <div class="form-group">
+
+                                <label for="requestDescription">
+                                    &gt; JELASKAN_IDE_KAMU
+                                </label>
+
+                                <textarea
+                                    id="requestDescription"
+                                    name="description"
+                                    rows="5"
+                                    placeholder="Jelaskan aplikasi yang kamu inginkan..."
+                                    required
+                                ></textarea>
+
+                            </div>
+
+
+
+                            <button
+                                type="submit"
+                                class="cyber-button primary request-submit"
+                            >
+
+                                <span>
+                                    ./ KIRIM_REQUEST
+                                </span>
+
+                                <i></i>
+
+                            </button>
+
+
+                            <div
+                                class="request-message"
+                                id="requestMessage"
+                            ></div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ABOUT
+        ================================================== -->
+
+        <section
+            class="section about-section"
+            id="about"
+        >
+
+            <div class="section-container">
+
+
+                <div class="section-heading">
+
+                    <div class="section-number">
+                        [03]
+                    </div>
+
+
+                    <div>
+
+                        <span class="section-command">
+                            // ACCESS: developer_profile
+                        </span>
+
+                        <h2>
+                            WHO <span>AM I?</span>
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="about-grid">
+
+
+                    <div class="about-terminal">
+
+                        <div class="about-terminal-header">
+
+                            <span>
+                                developer_profile.exe
+                            </span>
+
+                            <span>
+                                [RUNNING]
+                            </span>
+
+                        </div>
+
+
+                        <div class="about-terminal-body">
+
+                            <p>
+                                <span class="prompt">
+                                    &gt;
+                                </span>
+
+                                Loading profile...
+                            </p>
+
+
+                            <p>
+                                <span class="prompt">
+                                    &gt;
+                                </span>
+
+                                Identity found.
+                            </p>
+
+
+                            <br>
+
+
+                            <p>
+
+                                <span class="key">
+                                    NAME:
+                                </span>
+
+                                ZORHAM
+
+                            </p>
+
+
+                            <p>
+
+                                <span class="key">
+                                    ROLE:
+                                </span>
+
+                                DEVELOPER / CREATOR
+
+                            </p>
+
+
+                            <p>
+
+                                <span class="key">
+                                    LOCATION:
+                                </span>
+
+                                INDONESIA
+
+                            </p>
+
+
+                            <p>
+
+                                <span class="key">
+                                    INTEREST:
+                                </span>
+
+                                TECHNOLOGY
+
+                            </p>
+
+
+                            <br>
+
+
+                            <p class="about-highlight">
+                                Curiosity is the first line of code.
+                            </p>
+
+
+                            <p>
+
+                                <span class="prompt">
+                                    &gt;
+                                </span>
+
+                                Profile loaded successfully.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="about-text">
+
+                        <span class="about-label">
+                            [ SYSTEM MESSAGE ]
+                        </span>
+
+
+                        <h3>
+
+                            BUILD.
+                            <br>
+
+                            LEARN.
+                            <br>
+
+                            <span>
+                                SHARE.
+                            </span>
+
+                        </h3>
+
+
+                        <p>
+
+                            zorham.tech bukan sekadar tempat
+                            untuk menampilkan project. Ini adalah
+                            ruang untuk mencoba, belajar, membuat
+                            sesuatu dari nol, dan membagikannya
+                            kepada orang lain.
+
+                        </p>
+
+
+                        <p>
+
+                            Tidak harus sempurna untuk dimulai.
+                            Yang penting adalah terus membangun.
+
+                        </p>
+
+
+                        <div class="about-signature">
+                            -- zorham.tech
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CONTACT
+        ================================================== -->
+
+        <section
+            class="section contact-section"
+            id="contact"
+        >
+
+            <div class="section-container">
+
+                <div class="contact-box">
+
+                    <div class="contact-decoration">
+                        &lt;/&gt;
+                    </div>
+
+
+                    <span class="section-command">
+                        // CONNECTION_REQUEST
+                    </span>
+
+
+                    <h2>
+                        LET'S <span>CONNECT</span>
+                    </h2>
+
+
+                    <p>
+
+                        Punya ide, pertanyaan, atau ingin
+                        berdiskusi tentang project?
+
+                    </p>
+
+
+                    <a
+                        href="mailto:mahruszorham@gmail.com"
+                        class="cyber-button primary"
+                    >
+
+                        <span>
+                            ./ KIRIM_PESAN
+                        </span>
+
+                        <i></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+
+            <div class="footer-logo">
+
+                <span>
+                    &lt;
+                </span>
+
+                zorham
+
+                <span>
+                    .tech
+                </span>
+
+                <span>
+                    /&gt;
+                </span>
+
+            </div>
+
+
+            <div class="footer-status">
+
+                <span class="status-dot"></span>
+
+                SYSTEM ONLINE
+
+            </div>
+
+
+            <div class="footer-copy">
+
+                © 2026 ZORHAM.TECH —
+                ALL SYSTEMS RESERVED.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
